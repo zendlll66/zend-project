@@ -1,4 +1,6 @@
-export default function Home() {
+import React from 'react'
+
+const contact = () => {
   return (
     <h1 className="text-4xl flex flex-col font-bold text-center text-white mt-[124px]">
       Hello world!
@@ -27,3 +29,5 @@ export default function Home() {
     </h1>
   )
 }
+
+export default contact
