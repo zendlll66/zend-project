@@ -22,8 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${kanit.variable} ${spaceMono.variable}`}>
       <body className="font-spaceMono bg-[#090C12] min-h-screen flex flex-col ">
-        <Nav />
+        
         <main className="flex-grow">{children}</main>
+        
+        <div className="fixed top-0 w-full z-20">
+          <Nav />
+        </div>
+
         <div className="fixed bottom-0 right-0 m-5">
           <MyFullName />
         </div>
