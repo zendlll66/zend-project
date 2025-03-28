@@ -1,1 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 @import "tailwindcss";
+
+/* กำหนดฟอนต์ให้กับ body และ class */
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+/* ถ้าต้องการใช้ Space Mono ในบางส่วนของเว็บไซต์ */
+.font-mono {
+  font-family: 'Space Mono', monospace;
+}
