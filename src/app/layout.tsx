@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 
 import { Kanit, Space_Mono } from "next/font/google";
 import "./globals.css";
