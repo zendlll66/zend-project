@@ -20,14 +20,12 @@ export default function Home() {
       <div className="relative z-10 mt-[100px] pointer-events-none">
         <SectionHero />
       </div>
-      <div className="relative z-10 mt-[340px] pointer-events-none">
+      <div className="relative z-10 mt-[100px] pointer-events-none">
         <BottonSocail />
       </div>
-      <div className="relative z-10 mt-20  pointer-events-none">
+      <div className="relative z-10 mt-20 w-full pointer-events-none ">
         <MyTool />
       </div>
-
-
 
       <div className="relative flex flex-col z-10 w-full h-full pointer-events-none gap-20 mt-20 items-center ">
         {/* เนื้อหา About */}

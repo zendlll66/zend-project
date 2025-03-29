@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Nav />
         </div>
 
-        <div className="fixed bottom-0 right-0 m-5">
+        <div className="fixed bottom-0 right-0 m-5 z-50">
           <MyFullName />
         </div>
       </body>
