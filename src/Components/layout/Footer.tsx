@@ -19,7 +19,7 @@ const Footer = () => {
 
                     {/* ขวา */}
                     <div className="flex flex-col items-center justify-center w-full py-15">
-                        <span>ZEnd</span>
+                        {/* <span>ZEnd</span> */}
                         <span>Software Development</span>
                     </div>
                 </div>

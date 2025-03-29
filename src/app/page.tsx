@@ -22,7 +22,7 @@ export default function Home() {
         <div className="relative z-10 mt-[100px] pointer-events-none">
           <SectionHero />
         </div>
-        <div className="relative z-10 mt-[200px]  ">
+        <div className="relative z-10 mt-[200px] pointer-events-auto ">
           <BottonSocail />
         </div>
       </div>
