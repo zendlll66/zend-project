@@ -20,22 +20,29 @@ export default function Home() {
       <div className="relative z-10 mt-[100px] pointer-events-none">
         <SectionHero />
       </div>
-      <div className="relative z-10 mt-[100px] pointer-events-none">
+      <div className="relative z-10 mt-[200px]  ">
         <BottonSocail />
       </div>
-      <div className="relative z-10 mt-20 w-full pointer-events-none ">
-        <MyTool />
-      </div>
 
-      <div className="relative flex flex-col z-10 w-full h-full pointer-events-none gap-20 mt-20 items-center ">
+
+      <div className="relative flex flex-col mt-[200px] z-10 w-full h-full pointer-events-none gap-20  items-center ">
         {/* เนื้อหา About */}
         <div className="relative  pointer-events-none">
           <SectionInfo />
         </div>
 
         {/* เนื้อหา Project */}
-        <div className="relative  pointer-events-none">
+        <div className="relative  w-full flex bg-black justify-center  pointer-events-none">
           <ProjectInfo />
+        </div>
+      </div>
+
+      <div className="relative z-10  w-full  mb-20 pointer-events-none ">
+        <h1 className="text-4xl font-bold text-center text-white my-4 font-mono">
+          My Developer Stack
+        </h1>
+        <div className="relative z-10">
+          <MyTool />
         </div>
       </div>
 

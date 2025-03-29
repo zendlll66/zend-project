@@ -1,22 +1,40 @@
-import React from 'react'
+import React from 'react';
 
 const MyTool = () => {
     return (
-        <div>
-            {/* bg-[#090b0f]/40 backdrop-blur-sm  border-1 border-[#221B20] */}
-            <div className='w-full p-5  flex flex-row  text-[#D9D9D9] font-mono  justify-center items-center  '>
-                <img src="Assets/htmlShadow.png" className="h-[100px] w-[100px]  " alt="HTML" />
-                <img src="Assets/cssShadow.png" className="h-[100px] w-[100px] " alt="CSS" />
-                <img src="Assets/jsShadow.png" className="h-[100px] w-[100px]" alt="JavaScript" />
-                <img src="Assets/tsShadow.png" className="h-[100px] w-[100px] " alt="TypeScript" />
-                <img src="Assets/reactShadow.png" className="h-[100px] w-[100px] " alt="React" />
-                <img src="Assets/nextjsShadow.png" className="h-[100px] w-[100px] " alt="Next.js" />
-                <img src="Assets/tailwindShadow.png" className="h-[100px] w-[100px]" alt="Tailwind CSS" />
-                <img src="Assets/mysqlShadow.png" className="h-[100px] w-[100px]" alt="MySQL" />
-                <img src="Assets/nodeShadow.png" className="h-[100px] w-[100px]" alt="Node.js" />
+        <div className="flex justify-center items-start my-20">
+            <div className="grid grid-cols-6 gap-4 p-5 text-[#D9D9D9] font-mono">
+                {/* แถวที่ 1 มี 6 ไอคอน */}
+                {[
+                    { src: "Assets/htmlShadow.png", alt: "HTML"},
+                    { src: "Assets/cssShadow.png", alt: "CSS" },
+                    { src: "Assets/jsShadow.png", alt: "JavaScript" },
+                    { src: "Assets/tsShadow.png", alt: "TypeScript" },
+                    { src: "Assets/reactShadow.png", alt: "React" },
+                    { src: "Assets/nextjsShadow.png", alt: "Next.js" },
+                ].map((item, index) => (
+                    <div key={index} className="flex flex-col justify-center items-center bg-black/80 backdrop-blur-sm p-4 rounded-lg w-[200px] h-[200px] border border-[#ffffff]/20 hover:bg-[#221B20]/50 transition-all duration-300 ease-in-out">
+                        <img src={item.src} className="h-[80px] w-[80px]" alt={item.alt} />
+                        <span className="mt-2 text-sm">{item.alt}</span>
+                    </div>
+                ))}
+
+                {/* แถวที่ 2 มี 3 ไอคอน และอยู่ตรงกลาง */}
+                <div className="col-span-6 flex justify-center gap-4">
+                    {[
+                        { src: "Assets/tailwindShadow.png", alt: "Tailwind CSS" },
+                        { src: "Assets/mysqlShadow.png", alt: "MySQL" },
+                        { src: "Assets/nodeShadow.png", alt: "Node.js" },
+                    ].map((item, index) => (
+                        <div key={index} className="flex flex-col justify-center items-center bg-black/80 backdrop-blur-sm p-4 rounded-lg w-[200px] h-[200px] border border-[#ffffff]/20 hover:bg-[#221B20]/50 transition-all duration-300 ease-in-out">
+                            <img src={item.src} className="h-[80px] w-[80px]" alt={item.alt} />
+                            <span className="mt-2 text-sm">{item.alt}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default MyTool
+export default MyTool;
