@@ -1,12 +1,9 @@
 import React from 'react'
-import Myicon from '../common/Myicon'
 
-const SectionInfo = () => {
+const ProjectInfo = () => {
     return (
         <div className='w-[1260px] h-[1010px] bg-[#090b0f]/40 backdrop-blur-sm  border-1 border-[#221B20] rounded-[20px] flex flex-col mb-[100px] px-[64px] py-[48px] text-[#D9D9D9] font-mono'>
-            <div className='flex flex-row justify-center items-center mt-[20px]'>
-                <Myicon />
-            </div>
+            
             <h1 className='text-[50px] font-bold text-white text-center mt-[20px] mb-[20px]'>
                 Kittithat Chankhom
             </h1>
@@ -30,11 +27,11 @@ const SectionInfo = () => {
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore nam, dicta minus inventore voluptates! Nulla sunt ea voluptas totam.
             </h1>
 
-           
+
 
 
         </div>
     )
 }
 
-export default SectionInfo
+export default ProjectInfo
