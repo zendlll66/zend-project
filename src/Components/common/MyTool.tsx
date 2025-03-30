@@ -16,7 +16,7 @@ const MyTool = () => {
                     { src: "Assets/mysqlShadow.png", alt: "MySQL" },
                     { src: "Assets/nodeShadow.png", alt: "Node.js" },
                     { src: "Assets/splineShadow.png", alt: "Spine Design" },
-                    { src: "Assets/figmaShadow.png", alt: "MySQL" },
+                    { src: "Assets/figmaShadow.png", alt: "Figma" },
                     { src: "Assets/psShadow.png", alt: "Adobe Photoshop" },
                 ].map((item, index) => (
                     <div key={index} className="flex flex-col justify-center items-center bg-black/80 backdrop-blur-sm p-4 rounded-lg w-[200px] h-[200px] border border-[#ffffff]/20 hover:bg-[#221B20]/50 transition-all duration-300 ease-in-out">

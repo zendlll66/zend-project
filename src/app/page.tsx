@@ -48,7 +48,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center text-white my-4 font-mono">
           My Developer Stack
         </h1>
-        <div className="relative z-10">
+        <div id="tool" className="relative z-10">
           <MyTool />
         </div>
       </div>
