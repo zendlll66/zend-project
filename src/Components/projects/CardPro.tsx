@@ -22,9 +22,9 @@ const CardPro: React.FC<CardProProps> = ({ image, title, onClick }) => {
       <Image
         src={image}
         alt={title}
-        width={30}
-        height={30}
-        className="w-full h-48 object-cover rounded-2xl"
+        width={500}
+        height={500}
+        className=" object-cover rounded-2xl"
       />
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-4">{title}</h2>

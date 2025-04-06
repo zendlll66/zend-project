@@ -1,14 +1,27 @@
-'use client';  // เพื่อให้เป็น Client Component
+'use client';  // ทำให้เป็น Client Component
 
 import React, { useState } from 'react';  // นำเข้า useState จาก React
 import Link from 'next/link';
 import CardPro from './CardPro';
 import Image from 'next/image';
 
+interface Project {
+  id: number;
+  image: string;
+  title: string;
+  links: {
+    demo: string;
+    github: string;
+  };
+  description: string;
+  techStack: string[];
+  role: string;
+}
 
 const ProjectInfo = () => {
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);  // ใช้ useState จาก React
-  const projects = [
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);  // ใช้ type สำหรับ selectedProject
+
+  const projects: Project[] = [
     {
       id: 1,
       image: '/Assets/Images/research_nu.png',
@@ -31,7 +44,7 @@ const ProjectInfo = () => {
       },
       description: 'A simple age calculator that helps you calculate your age in years, months, and days.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
-      role: 'Front-end Developer - UX/UI Design,'
+      role: 'Front-end Developer - UX/UI Design',
     },
     {
       id: 3,
@@ -43,7 +56,7 @@ const ProjectInfo = () => {
       },
       description: 'A Chrome extension that helps you manage your extensions and keep them updated.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
-      role: 'Front-end Developer - UX/UI Design,'
+      role: 'Front-end Developer - UX/UI Design',
     },
     {
       id: 4,
@@ -55,7 +68,7 @@ const ProjectInfo = () => {
       },
       description: 'A grid system that helps you create responsive layouts easily.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
-      role: 'Front-end Developer - UX/UI Design,'
+      role: 'Front-end Developer - UX/UI Design',
     },
   ];
 
@@ -63,7 +76,7 @@ const ProjectInfo = () => {
     setSelectedProject(null);
   }
 
-  function openModal(project: { id: number; image: string; title: string; links: { demo: string; github: string; }; description: string; techStack: string[]; role: string; }): void {
+  function openModal(project: Project): void {
     setSelectedProject(project);
   }
 
