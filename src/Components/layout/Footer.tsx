@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image';
 const Footer = () => {
     return (
         <div className="w-full mt-auto flex flex-col px-[80px] h-full bg-black border-t border-[#221B20] text-white">
@@ -8,7 +8,13 @@ const Footer = () => {
                     <div className='flex flex-row items-center w-full py-15'>
                         {/* ซ้าย */}
                         <div className="flex flex-col items-center">
-                            <img src="Assets/Grouplogo.png" className="w-[200px]" alt="Logo" />
+                            <Image
+                                src="/Assets/Grouplogo.png" 
+                                alt="Logo"
+                                width={200}
+                                height={200}
+                                className="rounded-full"
+                            />
                             <h1 className="text-[50px] font-bold text-white text-center">ZEnd</h1>
                         </div>
 

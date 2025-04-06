@@ -46,11 +46,11 @@ const Carousels = () => {
                         className="bg-[#06060a]/60 rounded-lg overflow-hidden border border-[#221B20] hover:bg-[#221B20]/50 transition-all duration-300 ease-in-out"
                     >
                         <div className="relative h-48 overflow-hidden">
-                            <img
+                            {/* <img
                                 src={post.image}
                                 alt={post.title}
                                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 "
-                            />
+                            /> */}
                             {/* <span className="absolute top-4 left-4 bg-red-500/80 text-white px-3 py-1 rounded-full text-sm">
                 {post.category}
               </span> */}

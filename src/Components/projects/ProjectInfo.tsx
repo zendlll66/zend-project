@@ -3,13 +3,15 @@
 import React, { useState } from 'react';  // นำเข้า useState จาก React
 import Link from 'next/link';
 import CardPro from './CardPro';
+import Image from 'next/image';
+
 
 const ProjectInfo = () => {
   const [selectedProject, setSelectedProject] = useState<any | null>(null);  // ใช้ useState จาก React
   const projects = [
     {
       id: 1,
-      image: 'Assets/Images/research_nu.png',
+      image: '/Assets/Images/research_nu.png',
       title: 'Researcher hub',
       links: {
         demo: 'https://researcher-hub.vercel.app',
@@ -21,7 +23,7 @@ const ProjectInfo = () => {
     },
     {
       id: 2,
-      image: 'Assets/Images/AgeCal.png',
+      image: '/Assets/Images/AgeCal.png',
       title: 'Age Calculator',
       links: {
         demo: 'https://researcher-hub.vercel.app',
@@ -33,7 +35,7 @@ const ProjectInfo = () => {
     },
     {
       id: 3,
-      image: 'Assets/Images/ExtensionManage.png',
+      image: '/Assets/Images/ExtensionManage.png',
       title: 'Extension Manager',
       links: {
         demo: 'https://researcher-hub.vercel.app',
@@ -45,7 +47,7 @@ const ProjectInfo = () => {
     },
     {
       id: 4,
-      image: 'Assets/Images/BentoGrid.png',
+      image: '/Assets/Images/BentoGrid.png',
       title: 'Bento Grid',
       links: {
         demo: 'https://researcher-hub.vercel.app',
@@ -111,9 +113,12 @@ const ProjectInfo = () => {
 
               {/* Project Image */}
               <div className="relative overflow-hidden rounded-lg mb-5 h-64 border border-gray-700/50">
-                <img
+
+                <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}
+                  width={500}
+                  height={500}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-70"></div>

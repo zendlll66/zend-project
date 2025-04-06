@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter(); // ใช้เพื่อตรวจสอบ path ปัจจุบัน
@@ -30,7 +30,13 @@ const Nav = () => {
     return (
         <nav className="flex flex-row text-white items-center justify-between h-[94px] border border-[#18151C] backdrop-blur-xl px-4 md:px-[80px] py-4 bg-[#090b0f]/40 font-mono fixed top-0 left-0 w-full z-50">
             <Link href="/">
-                <img src="Assets/Grouplogo.png" className="w-[90px] h-[90px]" alt="Logo" />
+                <Image
+                    src="/Assets/Grouplogo.png"
+                    alt="Logo"
+                    width={90}
+                    height={90}
+                    className="rounded-full"
+                />
             </Link>
 
             {/* Desktop Menu */}

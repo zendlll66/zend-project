@@ -1,5 +1,4 @@
 import SectionInfo from "@/Components/about/SectionInfo";
-import Carousels from "@/Components/blog/Carousels";
 import BottonSocail from "@/Components/common/BottonSocail";
 import Myicon from "@/Components/common/Myicon";
 import MyTool from "@/Components/common/MyTool";

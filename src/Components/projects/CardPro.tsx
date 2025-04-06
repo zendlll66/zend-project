@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-
+import Image from 'next/image';
 
 interface CardProProps {
   image: string;
@@ -16,12 +16,14 @@ interface CardProProps {
   onClick: () => void; // เพิ่ม onClick สำหรับเปิด Modal
 }
 
-const CardPro: React.FC<CardProProps> = ({ image, title, description, techStack, role, links, onClick }) => {
+const CardPro: React.FC<CardProProps> = ({ image, title, onClick }) => {
   return (
-    <div className="w-full max-w-sm rounded-2xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300">
-      <img
+    <div className="w-full max-w-sm rounded-2xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"> 
+      <Image
         src={image}
         alt={title}
+        width={30}
+        height={30}
         className="w-full h-48 object-cover rounded-2xl"
       />
       <div className="p-4">
