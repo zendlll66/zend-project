@@ -34,12 +34,12 @@ export default function Home() {
         </div>
 
         {/* เนื้อหา Blog */}
-        <div id="blog">
+        {/* <div id="blog">
           <Carousels/>
-        </div>
+        </div> */}
 
         {/* เนื้อหา Project */}
-        <div id="projects" className="relative  w-full flex bg-black justify-center  pointer-events-none">
+        <div id="projects" className="relative  w-full flex justify-center   pointer-events-auto">
           <ProjectInfo />
         </div>
       </div>

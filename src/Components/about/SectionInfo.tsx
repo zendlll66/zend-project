@@ -1,5 +1,9 @@
-import React from "react";  
+'use client';
+
+import React, { useEffect } from "react";   
 import Myicon from "../common/Myicon";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SectionInfo = () => {
   const infoData = [
@@ -32,9 +36,15 @@ const SectionInfo = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // เลื่อนครั้งเดียวแล้วหยุด
+    });
+  }, []);
+
   return (
     <div className="w-full max-w-[1260px] bg-[#090b0f]/40 backdrop-blur-xl border border-[#221B20] rounded-[20px] flex flex-col mb-[100px] px-4 sm:px-8 md:px-16 py-12 text-[#D9D9D9] font-mono">
-      
       {/* Icon */}
       <div className="flex justify-center items-center mt-5">
         <Myicon />
@@ -56,6 +66,7 @@ const SectionInfo = () => {
           <div
             key={index}
             className="flex flex-col items-center p-6 bg-[#06060a]/60 rounded-[10px] sm:w-full lg:max-w-[372px] h-auto min-h-[300px] border border-[#221B20] hover:bg-[#221B20]/50 transition-all duration-300 ease-in-out md:mx-auto"
+            data-aos="fade-up"
           >
             <span className="text-4xl">{item.icon}</span>
             <h2 className="text-lg font-bold mt-3">{item.title}</h2>

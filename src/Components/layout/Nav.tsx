@@ -36,19 +36,20 @@ const Nav = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex flex-row space-x-10 px-[40px] py-[16px] rounded-[100px] border border-[#18151C] bg-white/3 backdrop-blur-sm text-[14px] cursor-pointer">
                 <button onClick={() => handleNavigation("about")} className="cursor-pointer">About</button>
-                <button onClick={() => handleNavigation("blog")} className="cursor-pointer">Blog</button>
+                {/* <button onClick={() => handleNavigation("blog")} className="cursor-pointer">Blog</button> */}
                 <button onClick={() => handleNavigation("projects")} className="cursor-pointer">Projects</button>
                 <Link href="/mycomponent">
                     <button className="cursor-pointer">Component</button>
                 </Link>
                 <button onClick={() => handleNavigation("contact")} className="cursor-pointer">Contact</button>
             </div>
-            <button onClick={() => handleNavigation("tool")} className="cursor-pointer">Tool</button>
+            <button onClick={() => handleNavigation("tool")} className="cursor-pointer hidden md:block">Tool</button>
 
             {/* Hamburger Menu Button */}
             <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 cursor-pointer z-50"
+                title="Toggle Menu"
             >
                 <span className={`w-6 h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></span>
                 <span className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
@@ -59,7 +60,7 @@ const Nav = () => {
             <div className={`md:hidden absolute inset-0 bg-black h-screen transition-transform duration-300 ease-in-out ${isMenuOpen ? 'transform translate-x-0' : 'transform translate-x-full'}`}>
                 <div className="flex flex-col items-center justify-center h-full space-y-8 text-lg">
                     <button onClick={() => handleNavigation("about")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">About</button>
-                    <button onClick={() => handleNavigation("blog")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">Blog</button>
+                    {/* <button onClick={() => handleNavigation("blog")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">Blog</button> */}
                     <button onClick={() => handleNavigation("projects")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">Projects</button>
                     <Link href="/mycomponent">
                         <button className="cursor-pointer hover:text-red-500 transition-colors duration-300">Component</button>
