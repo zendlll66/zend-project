@@ -27,8 +27,8 @@ const ProjectInfo = () => {
       image: '/Assets/Images/research_nu.png',
       title: 'Researcher hub',
       links: {
-        demo: 'https://researcher-hub.vercel.app',
-        github: 'https://github.com/yourusername/researcher-hub'
+        demo: 'https://research-nu-nine.vercel.app/',
+        github: 'https://github.com/zendlll66/research-nu'
       },
       description: 'A platform for researchers to share their work and collaborate with others.',
       techStack: ['Next.js', 'Tailwind CSS', 'MySQL', 'Node.js', 'Vercel'],
@@ -39,8 +39,8 @@ const ProjectInfo = () => {
       image: '/Assets/Images/AgeCal.png',
       title: 'Age Calculator',
       links: {
-        demo: 'https://researcher-hub.vercel.app',
-        github: 'https://github.com/yourusername/researcher-hub'
+        demo: 'https://age-calculator-kappa-opal.vercel.app/',
+        github: 'https://github.com/zendlll66/age-calculator'
       },
       description: 'A simple age calculator that helps you calculate your age in years, months, and days.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
@@ -51,8 +51,8 @@ const ProjectInfo = () => {
       image: '/Assets/Images/ExtensionManage.png',
       title: 'Extension Manager',
       links: {
-        demo: 'https://researcher-hub.vercel.app',
-        github: 'https://github.com/yourusername/researcher-hub'
+        demo: 'https://extensions-manager-sigma.vercel.app/',
+        github: 'https://github.com/zendlll66/extensions-manager'
       },
       description: 'A Chrome extension that helps you manage your extensions and keep them updated.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
@@ -63,8 +63,8 @@ const ProjectInfo = () => {
       image: '/Assets/Images/BentoGrid.png',
       title: 'Bento Grid',
       links: {
-        demo: 'https://researcher-hub.vercel.app',
-        github: 'https://github.com/yourusername/researcher-hub'
+        demo: 'https://bento-grid-kappa-seven.vercel.app/',
+        github: 'https://github.com/zendlll66/bento-grid'
       },
       description: 'A grid system that helps you create responsive layouts easily.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
@@ -125,7 +125,7 @@ const ProjectInfo = () => {
               </h2>
 
               {/* Project Image */}
-              <div className="relative overflow-hidden rounded-lg mb-5 h-64 border border-gray-700/50">
+              <div className="relative overflow-hidden rounded-lg mb-5  border border-gray-700/50">
 
                 <Image
                   src={selectedProject.image}
