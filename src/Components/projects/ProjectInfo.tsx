@@ -70,6 +70,18 @@ const ProjectInfo = () => {
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
       role: 'Front-end Developer - UX/UI Design',
     },
+    {
+      id: 5,
+      image: '/Assets/Images/ecommerce.png',
+      title: 'ecommerce',
+      links: {
+        demo: 'https://bento-grid-kappa-seven.vercel.app/',
+        github: 'https://github.com/zendlll66/bento-grid'
+      },
+      description: 'A grid system that helps you create responsive layouts easily.',
+      techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      role: 'Front-end Developer - UX/UI Design',
+    },
   ];
 
   function closeModal(): void {
@@ -81,7 +93,7 @@ const ProjectInfo = () => {
   }
 
   return (
-    <div className="w-full max-w-[1260px] bg-[#090b0f]/40 backdrop-blur-xl border border-[#221B20] rounded-[20px] flex flex-col mb-[100px] px-4 sm:px-8 md:px-16 py-12 text-[#D9D9D9] font-mono">
+    <div className=" rounded-[20px] flex flex-col mb-[100px] px-4 sm:px-8 md:px-16 py-12 text-[#D9D9D9] font-mono ">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mt-5 mb-5">
         My Project and Experience.
       </h1>
@@ -103,7 +115,7 @@ const ProjectInfo = () => {
 
       {/* Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4 animate-fadeIn">
+        <div className="absolute inset-0 z-30 bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 animate-fadeIn">
           <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] text-white p-6 rounded-xl max-w-2xl w-full border border-gray-700/50 shadow-2xl relative overflow-hidden group">
             {/* Close Button */}
             <button

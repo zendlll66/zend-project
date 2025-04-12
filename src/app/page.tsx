@@ -38,7 +38,7 @@ export default function Home() {
         </div> */}
 
         {/* เนื้อหา Project */}
-        <div id="projects" className="relative  w-full flex justify-center   pointer-events-auto">
+        <div id="projects" className="relative z-30  w-full flex justify-center   pointer-events-auto">
           <ProjectInfo />
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center text-white my-4 font-mono">
           My Developer Stack
         </h1>
-        <div id="tool" className="relative z-10">
+        <div id="tool" className="relative ">
           <MyTool />
         </div>
       </div>

@@ -30,7 +30,7 @@ const SectionInfo = () => {
       content: [
         "🎓 Bachelor’s Degree in Computer Engineering from Naresuan University",
         "📅 Graduation Year: 2025",
-        "📚 GPA: 2.70",
+        
       ],
       icon: "📚",
     },
