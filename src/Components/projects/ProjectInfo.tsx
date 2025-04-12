@@ -24,7 +24,7 @@ const ProjectInfo = () => {
   const projects: Project[] = [
     {
       id: 1,
-      image: '/assets/Images/research_nu.png',
+      image: '/Assets/Images/research_nu.png',
       title: 'Researcher hub',
       links: {
         demo: 'https://research-nu-nine.vercel.app/',
@@ -36,7 +36,7 @@ const ProjectInfo = () => {
     },
     {
       id: 2,
-      image: '/assets/Images/AgeCal.png',
+      image: '/Assets/Images/AgeCal.png',
       title: 'Age Calculator',
       links: {
         demo: 'https://age-calculator-kappa-opal.vercel.app/',
@@ -48,7 +48,7 @@ const ProjectInfo = () => {
     },
     {
       id: 3,
-      image: '/assets/Images/ExtensionManage.png',
+      image: '/Assets/Images/ExtensionManage.png',
       title: 'Extension Manager',
       links: {
         demo: 'https://extensions-manager-sigma.vercel.app/',
@@ -60,7 +60,7 @@ const ProjectInfo = () => {
     },
     {
       id: 4,
-      image: '/assets/Images/BentoGrid.png',
+      image: '/Assets/Images/BentoGrid.png',
       title: 'Bento Grid',
       links: {
         demo: 'https://bento-grid-kappa-seven.vercel.app/',
@@ -72,7 +72,7 @@ const ProjectInfo = () => {
     },
     {
       id: 5,
-      image: '/assets/Images/ecommerce.png',
+      image: '/Assets/Images/ecommerce.png',
       title: 'ecommerce',
       links: {
         demo: 'https://bento-grid-kappa-seven.vercel.app/',

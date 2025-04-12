@@ -6,7 +6,7 @@ const SectionHero = () => {
             {/* โลโก้ */}
             
             <Image
-                src="/assets/Grouplogo.png"
+                src="/Assets/Grouplogo.png"
                 alt="Logo"
                 width={200}
                 height={200}

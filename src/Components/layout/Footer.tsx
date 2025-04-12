@@ -9,7 +9,7 @@ const Footer = () => {
                         {/* ซ้าย */}
                         <div className="flex flex-col items-center">
                             <Image
-                                src="/assets/Grouplogo.png" 
+                                src="/Assets/Grouplogo.png" 
                                 alt="Logo"
                                 width={100}
                                 height={100}
