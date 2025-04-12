@@ -9,10 +9,10 @@ const Footer = () => {
                         {/* ซ้าย */}
                         <div className="flex flex-col items-center">
                             <Image
-                                src="/Assets/Grouplogo.png" 
+                                src="/assets/Grouplogo.png" 
                                 alt="Logo"
-                                width={200}
-                                height={200}
+                                width={100}
+                                height={100}
                                 className="rounded-full"
                             />
                             <h1 className="text-[50px] font-bold text-white text-center">ZEnd</h1>

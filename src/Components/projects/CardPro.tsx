@@ -18,21 +18,21 @@ interface CardProProps {
 
 const CardPro: React.FC<CardProProps> = ({ image, title, onClick }) => {
   return (
-    <div className="w-full max-w-sm rounded-2xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"> 
+    <div className="flex flex-col w-full max-w-sm rounded-2xl items-center shadow-md overflow-hidden hover:scale-105  transition-transform duration-300 "> 
       <Image
         src={image}
         alt={title}
         width={500}
         height={500}
-        className=" object-cover rounded-2xl"
+        className=" object-cover  w-[300px] h-[200px] rounded-2xl"
       />
-      <div className="p-4">
+      <div className="p-4 ">
         <h2 className="text-xl font-semibold mb-4">{title}</h2>
         <button
           onClick={onClick}
           className="block w-full text-center bg-[#FF3035] text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors duration-200"
         >
-          ดูรายละเอียด
+          More Info
         </button>
       </div>
     </div>

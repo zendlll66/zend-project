@@ -2,6 +2,7 @@ import SectionInfo from "@/Components/about/SectionInfo";
 import BottonSocail from "@/Components/common/BottonSocail";
 import Myicon from "@/Components/common/Myicon";
 import MyTool from "@/Components/common/MyTool";
+import MailSender from "@/Components/contact/MailSender";
 import SectionHero from "@/Components/home/SectionHero";
 import ProjectInfo from "@/Components/projects/ProjectInfo";
 import Spline from '@splinetool/react-spline/next';
@@ -51,6 +52,17 @@ export default function Home() {
           <MyTool />
         </div>
       </div>
+
+      <div className="relative z-10  w-full  mb-20 pointer-events-none ">
+        <h1 className="text-4xl font-bold text-center text-white my-4 font-mono">
+          Contact Me
+        </h1>
+        <div id="contact" className="relative z-30  w-full flex justify-center   pointer-events-auto">
+          <MailSender />
+        </div>
+      </div>
+
+
 
     </div>
   );

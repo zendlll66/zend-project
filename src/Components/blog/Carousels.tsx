@@ -14,21 +14,21 @@ const blogPosts: BlogPost[] = [
         title: "Getting Started with React",
         description: "Learn the basics of React and start building modern web applications",
         category: "React",
-        image: "/Assets/reactShadow.png"
+        image: "/assets/reactShadow.png"
     },
     {
         id: 2,
         title: "Mastering TypeScript",
         description: "Deep dive into TypeScript features and best practices",
         category: "TypeScript",
-        image: "/Assets/tsShadow.png"
+        image: "/assets/tsShadow.png"
     },
     {
         id: 3,
         title: "Tailwind CSS Tips",
         description: "Essential tips and tricks for Tailwind CSS development",
         category: "CSS",
-        image: "Assets/tailwindShadow.png"
+        image: "assets/tailwindShadow.png"
     },
     // Add more blog posts as needed
 ];

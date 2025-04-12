@@ -24,7 +24,7 @@ const ProjectInfo = () => {
   const projects: Project[] = [
     {
       id: 1,
-      image: '/Assets/Images/research_nu.png',
+      image: '/assets/Images/research_nu.png',
       title: 'Researcher hub',
       links: {
         demo: 'https://research-nu-nine.vercel.app/',
@@ -36,7 +36,7 @@ const ProjectInfo = () => {
     },
     {
       id: 2,
-      image: '/Assets/Images/AgeCal.png',
+      image: '/assets/Images/AgeCal.png',
       title: 'Age Calculator',
       links: {
         demo: 'https://age-calculator-kappa-opal.vercel.app/',
@@ -48,7 +48,7 @@ const ProjectInfo = () => {
     },
     {
       id: 3,
-      image: '/Assets/Images/ExtensionManage.png',
+      image: '/assets/Images/ExtensionManage.png',
       title: 'Extension Manager',
       links: {
         demo: 'https://extensions-manager-sigma.vercel.app/',
@@ -60,7 +60,7 @@ const ProjectInfo = () => {
     },
     {
       id: 4,
-      image: '/Assets/Images/BentoGrid.png',
+      image: '/assets/Images/BentoGrid.png',
       title: 'Bento Grid',
       links: {
         demo: 'https://bento-grid-kappa-seven.vercel.app/',
@@ -72,7 +72,7 @@ const ProjectInfo = () => {
     },
     {
       id: 5,
-      image: '/Assets/Images/ecommerce.png',
+      image: '/assets/Images/ecommerce.png',
       title: 'ecommerce',
       links: {
         demo: 'https://bento-grid-kappa-seven.vercel.app/',
@@ -93,8 +93,8 @@ const ProjectInfo = () => {
   }
 
   return (
-    <div className=" rounded-[20px] flex flex-col mb-[100px] px-4 sm:px-8 md:px-16 py-12 text-[#D9D9D9] font-mono ">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mt-5 mb-5">
+    <div className=" rounded-[20px] flex flex-col mb-[100px] px-4 sm:px-8 md:px-16  text-[#D9D9D9] font-mono ">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center  mb-5">
         My Project and Experience.
       </h1>
 

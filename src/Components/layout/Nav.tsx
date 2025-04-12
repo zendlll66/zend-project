@@ -31,7 +31,7 @@ const Nav = () => {
         <nav className="flex flex-row text-white items-center justify-between h-[94px] border border-[#18151C] backdrop-blur-xl px-4 md:px-[80px] py-4 bg-[#090b0f]/40 font-mono fixed top-0 left-0 w-full z-50">
             <Link href="/">
                 <Image
-                    src="/Assets/Grouplogo.png"
+                    src="/assets/Grouplogo.png"
                     alt="Logo"
                     width={90}
                     height={90}
