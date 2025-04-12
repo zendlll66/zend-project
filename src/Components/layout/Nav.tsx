@@ -49,7 +49,14 @@ const Nav = () => {
                 </Link>
                 <button onClick={() => handleNavigation("contact")} className="cursor-pointer">Contact</button>
             </div>
-            <button onClick={() => handleNavigation("tool")} className="cursor-pointer hidden md:block">Tool</button>
+            <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer hidden md:block border border-white/30 px-5 py-2 rounded-full text-sm hover:bg-white/10 transition"
+            >
+                Resume
+            </a>
 
             {/* Hamburger Menu Button */}
             <button

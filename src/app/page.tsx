@@ -17,7 +17,7 @@ export default function Home() {
       {/* 🟡 เนื้อหา home*/}
       <div id="home" className="relative items-center justify-center flex flex-col w-full h-full pointer-events-none ">
         <div className="relative z-10 mt-[140px] pointer-events-none">
-          <Myicon />
+          <Myicon text = {"ZEnd"} />
         </div>
         <div className="relative z-10 mt-[100px] pointer-events-none">
           <SectionHero />

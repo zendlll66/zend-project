@@ -57,7 +57,7 @@ const SectionInfo = () => {
 
       {/* Icon */}
       <div className="flex justify-center items-center mt-5">
-        <Myicon />
+        <Myicon text = {"About"}/>
       </div>
 
       {/* ชื่อ */}
