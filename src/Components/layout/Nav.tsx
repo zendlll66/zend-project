@@ -9,14 +9,24 @@ const Nav = () => {
 
     const handleNavigation = (id: string) => {
         if (window.location.pathname === "/") {
-            // ถ้าอยู่หน้าแรกอยู่แล้ว ให้ Scroll ทันที
             scrollToSection(id);
         } else {
-            // ถ้าไม่อยู่หน้าแรก ให้เปลี่ยนไปหน้า / ก่อน แล้ว Scroll
+            // เปลี่ยนหน้า และรอให้โหลดเสร็จก่อน scroll
             router.push(`/#${id}`);
+
+            // Listen เมื่อโหลดเสร็จ
+            const handleRouteChange = () => {
+                scrollToSection(id);
+                // ยกเลิก listener หลังเรียกครั้งเดียว
+                window.removeEventListener("load", handleRouteChange);
+            };
+
+            // รอให้หน้าใหม่โหลดก่อน scroll
+            window.addEventListener("load", handleRouteChange);
         }
         setIsMenuOpen(false);
     };
+
 
     const scrollToSection = (id: string) => {
         const section = document.getElementById(id);
@@ -35,7 +45,7 @@ const Nav = () => {
                     alt="Logo"
                     width={90}
                     height={90}
-                    className="rounded-full"
+                    className="rounded-full "
                 />
             </Link>
 

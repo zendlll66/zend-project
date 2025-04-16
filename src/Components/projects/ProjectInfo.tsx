@@ -78,9 +78,21 @@ const ProjectInfo = () => {
         demo: 'https://bento-grid-kappa-seven.vercel.app/',
         github: 'https://github.com/zendlll66/bento-grid'
       },
-      description: 'A grid system that helps you create responsive layouts easily.',
+      description: 'A fully responsive e-commerce product detail page inspired by product-focused landing pages.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
       role: 'Front-end Developer - UX/UI Design',
+    },
+    {
+      id: 5,
+      image: '/Assets/Images/SaaS-landing-page.png',
+      title: 'landing-page',
+      links: {
+        demo: 'https://zend-saas-landing-page.vercel.app/',
+        github: 'https://github.com/zendlll66/saas-landing-page'
+      },
+      description: 'A sleek, responsive landing page for a fictional productivity SaaS product. Built with modern design practices and polished UI animations to showcase product features, pricing, and testimonials.',
+      techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      role: 'Front-end Developer',
     },
   ];
 
