@@ -19,7 +19,7 @@ const MyTool = () => {
                     { src: "/Assets/figmaShadow.png", alt: "Figma" },
                     { src: "/Assets/psShadow.png", alt: "Adobe Photoshop" },
                 ].map((item, index) => (
-                    <div key={index} className="flex flex-col justify-center items-center bg-black/80 backdrop-blur-sm p-4 rounded-lg  border border-[#ffffff]/20 hover:bg-[#221B20]/50 transition-all duration-300 ease-in-out">
+                    <div data-aos="fade-up" key={index} className="flex flex-col justify-center items-center bg-black/80 backdrop-blur-sm p-4 rounded-lg  border border-[#ffffff]/20 hover:bg-[#221B20]/50 transition-all duration-300 ease-in-out">
                         <Image
                             src={item.src}
                             alt={item.alt}

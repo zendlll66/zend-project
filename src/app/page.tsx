@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       {/* 🟡 เนื้อหา home*/}
-      <div id="home" className="relative items-center justify-center flex flex-col w-full h-full pointer-events-none ">
+      <div id="home"  className="scroll-smooth relative items-center justify-center flex flex-col w-full h-full pointer-events-none ">
         <div className="relative z-10 mt-[140px] pointer-events-none">
           <Myicon text = {"ZEnd"} />
         </div>
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative flex flex-col mt-[200px] z-10 w-full h-full pointer-events-none gap-20  items-center ">
+      <div className="scroll-smooth relative flex flex-col mt-[200px] z-10 w-full h-full pointer-events-none gap-20  items-center ">
         {/* เนื้อหา About */}
         <div id="about" className="relative pointer-events-none  w-full flex justify-center">
           <SectionInfo />
@@ -39,13 +39,13 @@ export default function Home() {
         </div> */}
 
         {/* เนื้อหา Project */}
-        <div id="projects" className="relative z-30  w-full flex justify-center   pointer-events-auto">
+        <div id="projects" className="scroll-smooth relative z-30  w-full flex justify-center   pointer-events-auto">
           <ProjectInfo />
         </div>
       </div>
 
-      <div className="relative z-10  w-full  mb-20 pointer-events-none ">
-        <h1 className="text-4xl font-bold text-center text-white my-4 font-mono">
+      <div className="scroll-smooth relative z-10  w-full  mb-20 pointer-events-none ">
+        <h1 data-aos="fade-up" className="text-4xl font-bold text-center text-white my-4 font-mono">
           My Developer Stack
         </h1>
         <div id="tool" className="relative ">
@@ -53,8 +53,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative z-10  w-full  mb-20 pointer-events-none ">
-        <h1 className="text-4xl font-bold text-center text-white my-4 font-mono">
+      <div className="scroll-smooth relative z-10  w-full  mb-20 pointer-events-none ">
+        <h1 data-aos="fade-up" className="text-4xl font-bold text-center text-white my-4 font-mono">
           Contact Me
         </h1>
         <div id="contact" className="relative z-30  w-full flex justify-center   pointer-events-auto">

@@ -20,6 +20,7 @@ interface Project {
 
 const ProjectInfo = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);  // ใช้ type สำหรับ selectedProject
+  const [showAll, setShowAll] = useState(false);
 
   const projects: Project[] = [
     {
@@ -31,7 +32,7 @@ const ProjectInfo = () => {
         github: 'https://github.com/zendlll66/research-nu'
       },
       description: 'A platform for researchers to share their work and collaborate with others.',
-      techStack: ['Next.js', 'Tailwind CSS', 'MySQL', 'Node.js', 'Vercel'],
+      techStack: ['React', 'Tailwind CSS', 'MySQL', 'Node.js', 'Vercel'],
       role: 'Front-end Developer - UX/UI Design',
     },
     {
@@ -75,15 +76,15 @@ const ProjectInfo = () => {
       image: '/Assets/Images/ecommerce.png',
       title: 'ecommerce',
       links: {
-        demo: 'https://bento-grid-kappa-seven.vercel.app/',
-        github: 'https://github.com/zendlll66/bento-grid'
+        demo: 'https://ecommerce-product-zeta.vercel.app/',
+        github: 'https://github.com/zendlll66/ecommerce-product'
       },
       description: 'A fully responsive e-commerce product detail page inspired by product-focused landing pages.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
       role: 'Front-end Developer - UX/UI Design',
     },
     {
-      id: 5,
+      id: 6,
       image: '/Assets/Images/SaaS-landing-page.png',
       title: 'landing-page',
       links: {
@@ -92,6 +93,30 @@ const ProjectInfo = () => {
       },
       description: 'A sleek, responsive landing page for a fictional productivity SaaS product. Built with modern design practices and polished UI animations to showcase product features, pricing, and testimonials.',
       techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      role: 'Front-end Developer',
+    },
+    {
+      id: 7,
+      image: '/Assets/Images/bus-tracking.png',
+      title: 'Bus Tracking NU-Rework',
+      links: {
+        demo: 'https://nu-bus-tracking.vercel.app/',
+        github: 'https://github.com/zendlll66/bus-tracking'
+      },
+      description: 'A live tracking system for the buses at Naresuan University, designed to improve real-time vehicle tracking and user accessibility.',
+      techStack: ['Next.js', 'Tailwind CSS', 'Vercel', 'leaflet.js'],
+      role: 'Front-end Developer',
+    },
+    {
+      id: 8,
+      image: '/Assets/Images/landing-page-clone0.png',
+      title: 'Landing Page Clone ',
+      links: {
+        demo: 'https://zend-clone-page.vercel.app/',
+        github: 'https://github.com/zendlll66/simple-portfolio'
+      },
+      description: 'A pixel-perfect landing page cloned from a Figma Community design, focusing on clean UI layout, responsive design, and smooth transitions.',
+      techStack: ['React', 'Tailwind CSS', 'Vercel',],
       role: 'Front-end Developer',
     },
   ];
@@ -105,13 +130,13 @@ const ProjectInfo = () => {
   }
 
   return (
-    <div className=" rounded-[20px] flex flex-col mb-[100px] px-4 sm:px-8 md:px-16  text-[#D9D9D9] font-mono ">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center  mb-5">
+    <div className=" rounded-[20px] flex justify-center items-center flex-col mb-[100px] px-4 sm:px-8 md:px-16  text-[#D9D9D9] font-mono ">
+      <h1 data-aos="fade-up" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center  mb-5">
         My Project and Experience.
       </h1>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center mt-8">
-        {projects.map((project) => (
+      <div data-aos="fade-up" className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center mt-8">
+        {(showAll ? projects : projects.slice(0, 4)).map((project) => (
           <CardPro
             key={project.id}
             image={project.image}
@@ -123,8 +148,14 @@ const ProjectInfo = () => {
             onClick={() => openModal(project)}
           />
         ))}
-      </div>
 
+      </div>
+      <button
+        onClick={() => setShowAll(!showAll)}
+        className="text-white mt-20 bg-gray-800 px-6 py-2 rounded-full w-fit hover:bg-gray-700 transition-all"
+      >
+        {showAll ? 'See Less' : 'See More'}
+      </button>
       {/* Modal */}
       {selectedProject && (
         <div className="absolute inset-0 z-30 bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 animate-fadeIn">

@@ -48,7 +48,7 @@ const SectionInfo = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true, // เลื่อนครั้งเดียวแล้วหยุด
+      // once: true, // เลื่อนครั้งเดียวแล้วหยุด
     });
   }, []);
 
@@ -56,17 +56,17 @@ const SectionInfo = () => {
     <div className="w-full max-w-[1260px] bg-[#090b0f]/40 backdrop-blur-xl border border-[#221B20] rounded-[20px] flex flex-col mb-[100px] px-4 sm:px-8 md:px-16 py-12 text-[#D9D9D9] font-mono">
 
       {/* Icon */}
-      <div className="flex justify-center items-center mt-5">
+      <div data-aos="fade-up" className="flex justify-center items-center mt-5">
         <Myicon text = {"About"}/>
       </div>
 
       {/* ชื่อ */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mt-5 mb-5">
+      <h1 data-aos="fade-up" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mt-5 mb-5">
         Kittithat Chankhom
       </h1>
 
       {/* คำอธิบาย */}
-      <p className="text-center text-sm sm:text-base max-w-[900px] mx-auto mb-8">
+      <p data-aos="fade-up" className="text-center text-sm sm:text-base max-w-[900px] mx-auto mb-8">
         I am a passionate Front-end Developer and UX/UI Designer with expertise in React, Next.js, and Tailwind CSS. I am currently working towards becoming a Full-stack Developer, capable of handling both Front-end and Back-end development. I have experience in web development and am always excited to learn new technologies and improve my skills.
       </p>
 

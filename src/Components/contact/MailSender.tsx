@@ -36,7 +36,7 @@ const MailSender = () => {
             );
     };
     return (
-        <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-4 max-w-lg mx-auto mt-10  rounded-md shadow">
+        <form data-aos="fade-up" ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-4 max-w-lg mx-auto mt-10  rounded-md shadow">
             <div className='flex flex-row gap-4'> 
                 <input
                     type="text"

@@ -9,23 +9,20 @@ const Nav = () => {
 
     const handleNavigation = (id: string) => {
         if (window.location.pathname === "/") {
-            scrollToSection(id);
+          scrollToSection(id);
         } else {
-            // เปลี่ยนหน้า และรอให้โหลดเสร็จก่อน scroll
-            router.push(`/#${id}`);
-
-            // Listen เมื่อโหลดเสร็จ
-            const handleRouteChange = () => {
-                scrollToSection(id);
-                // ยกเลิก listener หลังเรียกครั้งเดียว
-                window.removeEventListener("load", handleRouteChange);
-            };
-
-            // รอให้หน้าใหม่โหลดก่อน scroll
-            window.addEventListener("load", handleRouteChange);
+          router.push(`/#${id}`, { scroll: false }); // ✅ ปิด scroll auto
+      
+          const handleRouteChange = () => {
+            scrollToSection(id);
+            window.removeEventListener("load", handleRouteChange);
+          };
+      
+          window.addEventListener("load", handleRouteChange);
         }
         setIsMenuOpen(false);
-    };
+      };
+      
 
 
     const scrollToSection = (id: string) => {
@@ -39,7 +36,8 @@ const Nav = () => {
 
     return (
         <nav className="flex flex-row text-white items-center justify-between h-[94px] border border-[#18151C] backdrop-blur-xl px-4 md:px-[80px] py-4 bg-[#090b0f]/40 font-mono fixed top-0 left-0 w-full z-50">
-            <Link href="/">
+            <Link href="/" scroll={false}>
+            
                 <Image
                     src="/Assets/Grouplogo.png"
                     alt="Logo"
@@ -51,10 +49,10 @@ const Nav = () => {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex flex-row space-x-10 px-[40px] py-[16px] rounded-[100px] border border-[#18151C] bg-white/3 backdrop-blur-sm text-[14px] cursor-pointer">
-                <button onClick={() => handleNavigation("about")} className="cursor-pointer">About</button>
+                <button  onClick={() => handleNavigation("about")} className="cursor-pointer">About</button>
                 {/* <button onClick={() => handleNavigation("blog")} className="cursor-pointer">Blog</button> */}
                 <button onClick={() => handleNavigation("projects")} className="cursor-pointer">Projects</button>
-                <Link href="/mycomponent">
+                <Link href="/mycomponent" scroll={false}>
                     <button className="cursor-pointer">Component</button>
                 </Link>
                 <button onClick={() => handleNavigation("contact")} className="cursor-pointer">Contact</button>
@@ -85,7 +83,7 @@ const Nav = () => {
                     <button onClick={() => handleNavigation("about")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">About</button>
                     {/* <button onClick={() => handleNavigation("blog")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">Blog</button> */}
                     <button onClick={() => handleNavigation("projects")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">Projects</button>
-                    <Link href="/mycomponent">
+                    <Link href="/mycomponent" scroll={false}>
                         <button className="cursor-pointer hover:text-red-500 transition-colors duration-300">Component</button>
                     </Link>
                     <button onClick={() => handleNavigation("contact")} className="cursor-pointer hover:text-red-500 transition-colors duration-300">Contact</button>
