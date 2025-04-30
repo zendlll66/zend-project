@@ -136,7 +136,7 @@ const ProjectInfo = () => {
       </h1>
 
       <div data-aos="fade-up" className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center mt-8">
-        {(showAll ? projects : projects.slice(0, 4)).map((project) => (
+        {(showAll ? projects : projects.slice(0, 6)).map((project) => (
           <CardPro
             key={project.id}
             image={project.image}

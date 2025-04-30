@@ -1,9 +1,10 @@
+
 import "./globals.css";
 import { Kanit, Space_Mono } from "next/font/google";
-
 import Nav from "@/Components/layout/Nav";
 import Footer from "@/Components/layout/Footer";
 import MyFullName from "@/Components/common/MyFullName";
+
 
 // นำเข้าฟอนต์และตั้งค่าตัวแปร CSS
 const kanit = Kanit({
@@ -19,15 +20,16 @@ const spaceMono = Space_Mono({
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+
   return (
     <html lang="en" className={`${kanit.variable} ${spaceMono.variable}`}>
       <body className="font-spaceMono bg-[#090C12] min-h-screen flex flex-col">
-        
+
         {/* Navigation Bar (ติดบนสุด) */}
         <div className="fixed top-0 w-full z-20">
           <Nav />
         </div>
-
+    
         {/* เนื้อหาหลัก */}
         <main className="flex-grow">{children}</main>
 

@@ -1,3 +1,4 @@
+
 import SectionInfo from "@/Components/about/SectionInfo";
 import BottonSocail from "@/Components/common/BottonSocail";
 import Myicon from "@/Components/common/Myicon";
@@ -7,17 +8,21 @@ import SectionHero from "@/Components/home/SectionHero";
 import ProjectInfo from "@/Components/projects/ProjectInfo";
 import Spline from '@splinetool/react-spline/next';
 
+
 export default function Home() {
+
   return (
     <div className="relative w-full min-h-screen  text-white font-mono  overflow-hidden">
+
+
       <div className="fixed inset-0 w-full h-full ">
         <Spline scene="https://prod.spline.design/tiWxr3zXMhwLVjCu/scene.splinecode" />
       </div>
 
       {/* 🟡 เนื้อหา home*/}
-      <div id="home"  className="scroll-smooth relative items-center justify-center flex flex-col w-full h-full pointer-events-none ">
+      <div id="home" className="scroll-smooth relative items-center justify-center flex flex-col w-full h-full pointer-events-none ">
         <div className="relative z-10 mt-[140px] pointer-events-none">
-          <Myicon text = {"ZEnd"} />
+          <Myicon text={"ZEnd"} />
         </div>
         <div className="relative z-10 mt-[100px] pointer-events-none">
           <SectionHero />

@@ -3,26 +3,29 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-const Nav = () => {
+
+
+const Nav: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter(); // ใช้เพื่อตรวจสอบ path ปัจจุบัน
+   
 
     const handleNavigation = (id: string) => {
         if (window.location.pathname === "/") {
-          scrollToSection(id);
-        } else {
-          router.push(`/#${id}`, { scroll: false }); // ✅ ปิด scroll auto
-      
-          const handleRouteChange = () => {
             scrollToSection(id);
-            window.removeEventListener("load", handleRouteChange);
-          };
-      
-          window.addEventListener("load", handleRouteChange);
+        } else {
+            router.push(`/#${id}`, { scroll: false }); // ✅ ปิด scroll auto
+
+            const handleRouteChange = () => {
+                scrollToSection(id);
+                window.removeEventListener("load", handleRouteChange);
+            };
+
+            window.addEventListener("load", handleRouteChange);
         }
         setIsMenuOpen(false);
-      };
-      
+    };
+
 
 
     const scrollToSection = (id: string) => {
@@ -37,7 +40,7 @@ const Nav = () => {
     return (
         <nav className="flex flex-row text-white items-center justify-between h-[94px] border border-[#18151C] backdrop-blur-xl px-4 md:px-[80px] py-4 bg-[#090b0f]/40 font-mono fixed top-0 left-0 w-full z-50">
             <Link href="/" scroll={false}>
-            
+
                 <Image
                     src="/Assets/Grouplogo.png"
                     alt="Logo"
@@ -49,7 +52,7 @@ const Nav = () => {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex flex-row space-x-10 px-[40px] py-[16px] rounded-[100px] border border-[#18151C] bg-white/3 backdrop-blur-sm text-[14px] cursor-pointer">
-                <button  onClick={() => handleNavigation("about")} className="cursor-pointer">About</button>
+                <button onClick={() => handleNavigation("about")} className="cursor-pointer">About</button>
                 {/* <button onClick={() => handleNavigation("blog")} className="cursor-pointer">Blog</button> */}
                 <button onClick={() => handleNavigation("projects")} className="cursor-pointer">Projects</button>
                 <Link href="/mycomponent" scroll={false}>
@@ -57,6 +60,7 @@ const Nav = () => {
                 </Link>
                 <button onClick={() => handleNavigation("contact")} className="cursor-pointer">Contact</button>
             </div>
+
             <a
                 href="/Resume.pdf"
                 target="_blank"
@@ -65,6 +69,9 @@ const Nav = () => {
             >
                 Resume
             </a>
+
+
+
 
             {/* Hamburger Menu Button */}
             <button
