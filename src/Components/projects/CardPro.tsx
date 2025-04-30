@@ -26,11 +26,11 @@ const CardPro: React.FC<CardProProps> = ({ image, title, onClick }) => {
         height={500}
         className=" object-cover  w-[300px] h-[200px] rounded-2xl"
       />
-      <div className="p-4 ">
+      <div className="p-4 justify-center flex flex-col  w-full items-center ">
         <h2 className="text-xl font-semibold mb-4">{title}</h2>
         <button
           onClick={onClick}
-          className="block w-full text-center bg-[#FF3035] text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors duration-200"
+          className="block w-full text-center  bg-[#FF3035] text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors duration-200"
         >
           More Info
         </button>

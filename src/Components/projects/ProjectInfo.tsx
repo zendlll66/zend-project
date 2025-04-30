@@ -74,7 +74,7 @@ const ProjectInfo = () => {
     {
       id: 5,
       image: '/Assets/Images/ecommerce.png',
-      title: 'ecommerce',
+      title: 'ecommerce simple page',
       links: {
         demo: 'https://ecommerce-product-zeta.vercel.app/',
         github: 'https://github.com/zendlll66/ecommerce-product'
@@ -119,6 +119,30 @@ const ProjectInfo = () => {
       techStack: ['React', 'Tailwind CSS', 'Vercel',],
       role: 'Front-end Developer',
     },
+    {
+      id: 9,
+      image: '/Assets/Images/Food-slider.png',
+      title: 'Food Slider',
+      links: {
+        demo: 'https://zend-food-slider.vercel.app/',
+        github: 'https://github.com/zendlll66/food-slider'
+      },
+      description: 'A sleek, interactive food slider that showcases various food items in a stylish layout, perfect for restaurant menus or food-related projects.',
+      techStack: ['React', 'Tailwind CSS', 'Vercel',],
+      role: 'Front-end Developer',
+    },
+    {
+      id: 10,
+      image: '/Assets/Images/3D-site.png',
+      title: '3D-site Present Page',
+      links: {
+        demo: 'https://zend-sim-3d.vercel.app/',
+        github: 'https://github.com/zendlll66/sim-3d'
+      },
+      description: 'A creative product showcase simulating 3D movement using Tailwind CSS and custom animations. The interactive layout lets users navigate through different product variants with smooth transitions, all built without using WebGL or external 3D tools.',
+      techStack: ['React', 'Tailwind CSS', 'Vercel',],
+      role: 'Front-end Developer',
+    },
   ];
 
   function closeModal(): void {
@@ -135,7 +159,7 @@ const ProjectInfo = () => {
         My Project and Experience.
       </h1>
 
-      <div data-aos="fade-up" className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center mt-8">
+      <div data-aos="fade-up" className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-center mt-8">
         {(showAll ? projects : projects.slice(0, 6)).map((project) => (
           <CardPro
             key={project.id}
